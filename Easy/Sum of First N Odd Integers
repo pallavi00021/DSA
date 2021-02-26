@@ -1,0 +1,26 @@
+Given an integer n, return the sum of the first n positive odd integers.
+
+Constraints
+n ≤ 1,000
+
+Input
+n = 5
+
+Output
+25
+
+Explanation
+The first 5 odd integers are [1, 3, 5, 7, 9] and its sum is 25.
+
+int solve(int n) {
+    int sum =0,c=0;
+    for(int i=1;c!=n;i++)
+    {
+        if(i%2!=0)
+        {
+            sum+=i;
+            c++;
+        }
+    }
+    return sum;
+}
