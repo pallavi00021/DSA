@@ -1,0 +1,29 @@
+Input
+a = [5, 10, 15]
+b = [3, 8, 9]
+
+Output
+[3, 5, 8, 9, 10, 15]
+
+vector<int> solve(vector<int>& a, vector<int>& b) {
+     int alen = a.size();
+    int blen = b.size();
+    int tlen = alen + blen;
+    vector<int> c(tlen);
+    int i = 0, j = 0, k = 0;
+ 
+    while (i < alen && j < blen)
+    {
+        if (a[i] < b[j])
+            c[k++] = a[i++];
+        else
+            c[k++] = b[j++];
+    }
+    while (i < alen)
+        c[k++] = a[i++];
+ 
+    while (j < blen)
+        c[k++] = b[j++];
+ 
+    return c;
+}
