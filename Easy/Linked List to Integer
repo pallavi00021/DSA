@@ -1,0 +1,23 @@
+This question is from binarysearch.com
+
+Input node = [1, 0, 0]                1 0 0
+                                      4 2 0   ( 4 * 1 + 2 * 0 + 0 * ) = ( 4 + 0 + 0 ) = 4 [binary to decimal]
+
+Output
+4
+
+/**
+ * class LLNode {
+ *     public:
+ *         int val;
+ *         LLNode *next;
+ * };
+ */
+int solve(LLNode* node) {
+    int ans=0;
+while(node){
+ans=ans*2+node->val;
+node=node->next;
+}
+return ans;
+}
