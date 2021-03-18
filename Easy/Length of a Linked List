@@ -1,0 +1,20 @@
+ Question is from Binarysearch.com
+
+ Input node = [5, 4, 3]
+Output  3
+
+/**
+ * class LLNode {
+ *     public:
+ *         int val;
+ *         LLNode *next;
+ * };
+ */
+int solve(LLNode* node) {
+    int count=0;
+while(node){
+count++;
+node=node->next;
+}
+return count;
+}
